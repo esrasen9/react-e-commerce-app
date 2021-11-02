@@ -1,0 +1,42 @@
+@import "../product/ProductCard.css";
+.home-image {
+    width: 100%;
+    z-index: -2;
+}
+
+.home-image img {
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
+}
+.home-body{
+    z-index: 1;
+    margin-top: -15%;
+}
+
+.route-tr-link {
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    background-color: white;
+}
+
+.home-iframe {
+    margin-left: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.home-iframe iframe {
+    margin-top: 10px;
+}
+.iframe-products {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+}
+
+@media (min-width:1300px) {
+    .home-body {
+        margin-top: -22%;
+    }
+}
