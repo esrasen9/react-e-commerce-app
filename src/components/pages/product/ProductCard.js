@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductRating from "./ProductRating";
+import "../product/ProductCard.css";
 
 const ProductCard = () => {
     return (
