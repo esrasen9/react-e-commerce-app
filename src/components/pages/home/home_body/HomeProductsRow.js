@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ProductCard from "../../product/ProductCard";
 
 const HomeProductsRow = () => {

@@ -1,24 +1,21 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    justify-content: space-between;
+    width: 29vw;
     height: 600px;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid lightgray;
 }
 
-.carousel-products > .product-card {
-    width: 250px;
-    height: 600px;
-}
-.carousel-products .product-card img {
-    width: 200px;
-}
 .product-card img {
-    width: 300px;
+    width: 95%;
+    padding: 20px 5px;
 }
+
 .add-to-cart-button{
-    width: 40%;
+    width: 100%;
     margin: 0 auto 5px auto;
     padding: 0.4rem;
     cursor: pointer;
@@ -53,4 +50,15 @@
 
 .product-stars {
     display: flex;
+}
+
+.product-description p{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+@media(max-width: 760px){
+    .product-card {
+        width: 42vw;
+    }
 }

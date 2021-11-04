@@ -3,18 +3,17 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 17px;
     position: sticky;
     top:0;
-    z-index: 1;
 }
 .nav > * {
-    color: #fff;
+    color: #fff !important;
     text-decoration: none;
 }
 
 .logo-link {
     font-size: 2rem;
+    padding: 10px;
     font-weight: bolder;
 }
 
@@ -22,7 +21,8 @@
     display: flex;
     background-color: #F9BD69;
     align-items: center;
-    width: 70%;
+    width: 65%;
+    margin-top: 16px;
     border-radius: 5px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .nav-search input, .nav-search-icon {
-    height: 40px;
+    height: 38px;
 }
 
 .nav-search-icon {
@@ -52,6 +52,8 @@
 }
 
 .cart-link {
+    align-self: center;
+    padding: 5px;
     display: flex;
 }
 
@@ -61,8 +63,8 @@
     border-radius: 50%;
     align-self: flex-start;
     font-size: 1rem;
-    margin-left: -0.5rem;
-    margin-top: -0.5rem;
+    margin-left: -10px;
+    margin-top: -10px;
     text-align: center;
     background-color: #f02020;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import "./Home.css";
-import ProductCard from "../product/ProductCard";
 import HomeIframeRow from "./home_body/HomeIframeRow";
 import HomeProductsRow from "./home_body/HomeProductsRow";
 import HomeCarousel from "./home_body/HomeCarousel";
@@ -21,7 +20,6 @@ const Home = () => {
                     <HomeProductsRow />
                 </div>
             </div>
-
         </div>
     );
 }
