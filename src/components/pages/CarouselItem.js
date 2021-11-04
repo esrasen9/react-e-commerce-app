@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Carousel} from 'react-bootstrap';
 
-const HomeCarousel = () => {
+const CarouselItem = () => {
     styled.div`
     display: flex;
     justify-content: center;
@@ -38,4 +38,4 @@ const HomeCarousel = () => {
     );
 }
 
-export default HomeCarousel;
+export default CarouselItem;
