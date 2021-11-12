@@ -1,8 +1,21 @@
 import React from 'react';
 import ProductRating from "./ProductRating";
 import ".//ProductCard.css";
+import {useStateValue} from "../../context/Context";
 
 const ProductCard = ({image,title,price,rating}) => {
+    const [initialState,dispatch] = useStateValue();
+    const addToCart = () => {
+        dispatch({type: "ADD_TO_CART",
+            payload: {
+                title,
+                image,
+                price,
+                rating
+            }})
+        console.log(initialState.cart);
+
+    }
     return (
         <div className="product-card">
             <div className="product-image">
@@ -18,7 +31,7 @@ const ProductCard = ({image,title,price,rating}) => {
                    ${price}
                </div>
            </div>
-            <button className="add-to-cart-button">
+            <button onClick={addToCart} className="add-to-cart-button">
                 Add to Cart
             </button>
         </div>

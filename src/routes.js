@@ -1,5 +1,5 @@
 import Home from "./components/pages/home/Home";
-import Cart from "./components/pages/checkout/Cart";
+import Cart from "./components/pages/cart/Cart";
 
 export const routes = [
     {
@@ -14,7 +14,7 @@ export const routes = [
     },
     {
         exact: true,
-        path: "orders",
+        path: "/orders",
         component:""
     },
     {

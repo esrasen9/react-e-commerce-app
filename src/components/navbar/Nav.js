@@ -3,7 +3,9 @@ import {NavLink} from "react-router-dom";
 import Search from "./Search";
 import {AiOutlineShoppingCart} from "react-icons/all";
 import "./Nav.css";
+import {useStateValue} from "../../context/Context";
 const Nav = () => {
+    const [initialState]= useStateValue()
     return (
         <div className="nav">
             <NavLink className="logo-link" to="/">
@@ -20,7 +22,7 @@ const Nav = () => {
             </NavLink>
             <NavLink className="cart-link" to="/cart">
                 <AiOutlineShoppingCart size="30"/>
-                <div className="cart-quantity">0</div>
+                <div className="cart-quantity">{ initialState.cart.length}</div>
             </NavLink>
         </div>
     );

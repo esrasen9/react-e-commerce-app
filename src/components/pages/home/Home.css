@@ -39,10 +39,15 @@
     align-items: center;
 }
 
-.home-iframe, .iframe-row-img{
-    height: 350px;
+.home-iframe{
+    margin: 0 20px;
+    width: 30vw;
+    height: 32vh;
+}
+
+.iframe-row-img{
+    height: 32vh !important;
     object-fit: cover;
-    margin: 10px 5px 10px 0;
     width: 30vw;
 }
 

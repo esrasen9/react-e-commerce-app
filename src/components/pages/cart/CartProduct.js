@@ -8,8 +8,13 @@ const CartProduct = ({title,image,price}) => {
                 src={image}
                 alt={title}/>
             <div className="cart-product-detail">
-                <h2>{title}</h2>
-                <span>${price}</span>
+                <div>
+                    <h2>{title}</h2>
+                    <span>${price}</span>
+                </div>
+                <button className="remove-cart-button">
+                    Remove from cart
+                </button>
             </div>
         </div>
     );

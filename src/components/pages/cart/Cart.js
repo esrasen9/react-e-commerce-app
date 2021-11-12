@@ -5,9 +5,11 @@ import "./Cart.css";
 
 const Cart = () => {
     return (
-        <div className="checkout-page">
-            <CartLeftSide />
-            <CartRightSide />
+        <div className="cart-page">
+            <div className="cart">
+                <CartLeftSide />
+                <CartRightSide />
+            </div>
         </div>
     );
 }
