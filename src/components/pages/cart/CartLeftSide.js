@@ -16,10 +16,11 @@ const CartLeftSide = () => {
                 <h1 className="cart-title">Your shopping basket</h1>
                 <div className="cart-products">
                     {
-                        initialState.cart && initialState.cart.map((product,index) =>{
+                        initialState.cart && initialState.cart.map(product =>{
                             return(
                                 <CartProduct
-                                    key={index}
+                                    id={product.id}
+                                    key={product.id}
                                     title={product.title}
                                     image={product.image}
                                     price={product.price}

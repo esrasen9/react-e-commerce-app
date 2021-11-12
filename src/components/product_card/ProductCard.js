@@ -3,18 +3,17 @@ import ProductRating from "./ProductRating";
 import ".//ProductCard.css";
 import {useStateValue} from "../../context/Context";
 
-const ProductCard = ({image,title,price,rating}) => {
+const ProductCard = ({id,image,title,price,rating}) => {
     const [initialState,dispatch] = useStateValue();
     const addToCart = () => {
         dispatch({type: "ADD_TO_CART",
             payload: {
+                id,
                 title,
                 image,
                 price,
                 rating
-            }})
-        console.log(initialState.cart);
-
+            }});
     }
     return (
         <div className="product-card">
