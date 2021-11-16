@@ -1,5 +1,6 @@
 import Home from "./components/pages/home/Home";
 import Cart from "./components/pages/cart/Cart";
+import SignIn from "./components/pages/signin/SignIn";
 
 export const routes = [
     {
@@ -10,7 +11,7 @@ export const routes = [
     {
         exact: true,
         path: "/signin",
-        component:""
+        component:SignIn
     },
     {
         exact: true,

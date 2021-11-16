@@ -1,0 +1,68 @@
+.sign-page {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-container {
+    width: 400px;
+    height: 400px;
+    padding: 25px;
+    text-align: left;
+    border: 1px solid lightgray;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.sign-in-container p{
+    font-size: 0.8rem;
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+.form-input input {
+    padding: 5px;
+}
+.amazon-logo img{
+    margin: 20px;
+    width:150px;
+}
+
+.new-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.new-account-hr hr {
+    margin: 0 10px;
+}
+.new-account-hr {
+    width: 400px;
+    color: dimgray;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.new-account-button{
+    background-color: #F9F9F9;
+}
+
+.sign-in-button , .new-account-button {
+    margin: 20px auto;
+    width: 98%;
+    border-radius: 3px;
+    font-size: 15px;
+}

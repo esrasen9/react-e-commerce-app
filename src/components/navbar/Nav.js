@@ -22,7 +22,9 @@ const Nav = () => {
             </NavLink>
             <NavLink className="cart-link" to="/cart">
                 <AiOutlineShoppingCart size="30"/>
-                <div className="cart-quantity">{ initialState.cart.length}</div>
+                <div className="cart-quantity">
+                    <p>{ initialState.cart.length}</p>
+                </div>
             </NavLink>
         </div>
     );

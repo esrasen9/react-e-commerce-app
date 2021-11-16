@@ -19,7 +19,7 @@ const CartProduct = ({id,title,image,price}) => {
                 </div>
                 <button
                     onClick={removeToCart}
-                    className="remove-cart-button">
+                    className="button">
                     Remove from cart
                 </button>
             </div>

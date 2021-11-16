@@ -13,7 +13,7 @@ const ProductCard = ({id,image,title,price,rating}) => {
                 image,
                 price,
                 rating
-            }});
+        }});
     }
     return (
         <div className="product-card">
@@ -30,7 +30,7 @@ const ProductCard = ({id,image,title,price,rating}) => {
                    ${price}
                </div>
            </div>
-            <button onClick={addToCart} className="add-to-cart-button">
+            <button onClick={addToCart} className="button">
                 Add to Cart
             </button>
         </div>

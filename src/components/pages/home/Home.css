@@ -64,3 +64,8 @@
     }
 }
 
+@media(min-width: 1200px){
+    .home-products-row {
+        grid-template-columns: repeat(4,1fr);
+    }
+}

@@ -11,7 +11,7 @@ const CartRightSide = () => {
             <div className="checkout">
                 <p>Subtotal ({initialState.cart.length} items): ${subtotal}</p>
                 <div><input type="checkbox"/> This order contains a gift</div>
-                <button className="checkout-button">Proceed to checkout</button>
+                <button className="button">Proceed to checkout</button>
             </div>
         </div>
     );
