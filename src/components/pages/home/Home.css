@@ -40,7 +40,7 @@
 }
 
 .home-iframe{
-    margin: 0 20px;
+    margin: 0 10px;
     width: 30vw;
     height: 32vh;
 }
@@ -56,6 +56,45 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
+.discount-coupon {
+    padding: 20px;
+    margin: 0 10px;
+    background-color: white;
+    color: #131921;
+    height: 32vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+.coupon-code {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fdf0dc;
+    color: #F0C040;
+    border: 2px dashed #F0C040;
+}
+.discount-coupon h4 {
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+.coupon-code h2 {
+    margin: auto;
+    padding: 5px;
+}
+
+.copy-coupon-button {
+    border: 2px solid #F0C040;
+    width: 40%;
+    background-color: #F0C040;
+    font-size: 1.4rem;
+}
+
 
 @media(max-width:720px){
     .home-products-row {

@@ -53,5 +53,26 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.cart-discount-input{
+    height: 50px;
+    width: 400px;
+    border: 1px #a4a4a4 solid;
+    font-size: 1.2rem;
+}
+.cart-discount-input input {
+    width: 70%;
+    height: 100%;
+    padding: 0.4rem;
+    border: none;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-
+.cart-discount-input button {
+    background-color: #F9BD69;
+    border: none;
+    height: 100%;
+    width: 30%;
+    padding: 0.4rem;
+}

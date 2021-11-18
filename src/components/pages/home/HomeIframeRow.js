@@ -1,17 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
+import DiscountCoupon from "./DiscountCoupon";
 const HomeIframeRow = () => {
-
     return (
         <div className="home-iframe-row">
-            <div>
-                <Link to={{ pathname: "https://www.primevideo.com"}}  target="_blank">
-                    <img
-                        className="iframe-row-img"
-                        src="https://m.media-amazon.com/images/G/41/highvelocityevents/og_image/primeday._CB662937150_.png"
-                        alt=""/>
-                </Link>
-            </div>
             <iframe
                 className="home-iframe"
                 src="https://www.youtube.com/embed/6_RRWYw65cY"
@@ -19,11 +11,14 @@ const HomeIframeRow = () => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen/>
+            <DiscountCoupon/>
             <div>
-                <img
-                    className="iframe-row-img"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE6GGqb4I-obbowncOamSylNSw3LNxQb_SBOEPYC2OwJ_mSawWOC42CmgDCfaMW91rXFY&usqp=CAU"
-                    alt=""/>
+                <Link to={{ pathname: "https://www.primevideo.com"}}  target="_blank">
+                    <img
+                        className="iframe-row-img"
+                        src="https://m.media-amazon.com/images/G/41/highvelocityevents/og_image/primeday._CB662937150_.png"
+                        alt=""/>
+                </Link>
             </div>
         </div>
     );

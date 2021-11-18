@@ -1,14 +1,26 @@
-import React, {forwardRef} from 'react';
+import React, {useState} from 'react';
 import CartProduct from "./CartProduct";
 import {useStateValue} from "../../../context/Context";
 import FlipMove from "react-flip-move";
 
 const CartLeftSide = () => {
-    const [initialState] = useStateValue();
+    const [initialState,dispatch] = useStateValue();
+    const [code,setCode] = useState("");
+    const {cart,discountCode} = initialState;
     /*Functional components have no reference,
     I wrapped the CartProduct component with a div for
     FlipMove to work*/
 
+    const applyDiscountCode = () => {
+        if(code === discountCode){
+            dispatch({
+                type: "SET_DISCOUNTED_SUBTOTAL"
+            });
+        }
+        else {
+            alert("Invalid discount code!")
+        }
+    }
     return (
         <div className="cart-left-side">
             <div>
@@ -21,7 +33,7 @@ const CartLeftSide = () => {
                 <div className="cart-products">
                     <FlipMove>
                         {
-                            initialState.cart && initialState.cart.map((product,index) =>{
+                            cart && cart.map((product,index) =>{
                                 return(
                                     <div>
                                         <CartProduct
@@ -37,6 +49,15 @@ const CartLeftSide = () => {
                         }
                     </FlipMove>
                 </div>
+            </div>
+            <div className="cart-discount-input">
+                <input
+                    placeholder="Enter your discount code"
+                    value={code}
+                    onChange={(e) => setCode(e.target.value)}
+                    id="discount"
+                    type="text"/>
+                <button onClick={ applyDiscountCode}>Apply</button>
             </div>
         </div>
     );

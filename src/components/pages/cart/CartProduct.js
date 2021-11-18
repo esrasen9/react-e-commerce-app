@@ -5,6 +5,7 @@ const CartProduct = ({id,title,image,price}) => {
     const [initialState,dispatch] = useStateValue();
     const removeToCart = () => {
         dispatch({type: "REMOVE_TO_CART",payload: id});
+        dispatch({type: "SET_SUBTOTAL"})
     }
     return (
         <div className="cart-product">

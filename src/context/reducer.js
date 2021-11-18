@@ -1,6 +1,8 @@
 export const initialState = {
     cart: [],
-    user: null
+    user: null,
+    discountCode:"WUEQ10",
+    subtotal:0
 };
 
 export const reducer = (state,action) => {
@@ -19,6 +21,20 @@ export const reducer = (state,action) => {
             return {
                 ...state,
                 user: action.user
+            }
+        case "SET_SUBTOTAL"  :
+            return {
+                ...state,
+                subtotal: state.cart.reduce((acc,product) => {
+                    return acc + product.price;
+                },0).toFixed(2)
+            }
+        case "SET_DISCOUNTED_SUBTOTAL":
+            return {
+                ...state,
+                subtotal: (state.cart.reduce((acc,product) => {
+                    return acc + product.price;
+                },0)*0.9).toFixed(2)
             }
         default:
             return state;

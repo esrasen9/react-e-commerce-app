@@ -14,6 +14,9 @@ const ProductCard = ({id,image,title,price,rating}) => {
                 price,
                 rating
         }});
+        dispatch({
+            type: "SET_SUBTOTAL"
+        })
     }
     return (
         <div className="product-card">

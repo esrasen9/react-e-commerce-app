@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import "./Home.css";
 import HomeIframeRow from "./HomeIframeRow";
 import HomeProductsRow from "./HomeProductsRow";
-import CarouselItem from "../CarouselItem";
+import CarouselItem from "./CarouselItem";
 const Home = () => {
     return (
         <div className="page home-page">
@@ -16,7 +16,6 @@ const Home = () => {
             </div>
             <div>
                 <div className="home-body">
-                    <HomeProductsRow />
                     <HomeIframeRow />
                     <HomeProductsRow />
                 </div>

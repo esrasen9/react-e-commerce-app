@@ -48,24 +48,17 @@ const HomeProductsRow = () => {
             />
             <ProductCard
                 id={nextId()}
-                title="Product7"
+                title="Product5"
                 image="https://m.media-amazon.com/images/I/41SlXg-9ENL.jpg"
-                price={99.99}
-                rating={4.5}
+                price={15.99}
+                rating={2}
             />
             <ProductCard
                 id={nextId()}
-                title="Product8"
+                title="Product6"
                 image="https://m.media-amazon.com/images/I/41SlXg-9ENL.jpg"
-                price={10.45}
-                rating={1}
-            />
-            <ProductCard
-                id={nextId()}
-                title="Product9"
-                image="https://m.media-amazon.com/images/I/41SlXg-9ENL.jpg"
-                price={7.99}
-                rating={0}
+                price={10.99}
+                rating={3}
             />
         </div>
     );
