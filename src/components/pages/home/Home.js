@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import "./Home.css";
-import HomeIframeRow from "./home_body/HomeIframeRow";
-import HomeProductsRow from "./home_body/HomeProductsRow";
+import HomeIframeRow from "./HomeIframeRow";
+import HomeProductsRow from "./HomeProductsRow";
 import CarouselItem from "../CarouselItem";
 const Home = () => {
     return (
@@ -16,6 +16,7 @@ const Home = () => {
             </div>
             <div>
                 <div className="home-body">
+                    <HomeProductsRow />
                     <HomeIframeRow />
                     <HomeProductsRow />
                 </div>

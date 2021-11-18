@@ -5,7 +5,7 @@ const CartRightSide = () => {
     const [initialState] = useStateValue();
     const subtotal = initialState.cart.reduce((acc,product) => {
         return acc + product.price;
-    },0)
+    },0).toFixed(2);
     return (
         <div className="cart-right-side">
             <div className="checkout">

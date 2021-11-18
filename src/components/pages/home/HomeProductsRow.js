@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCard from "../../../product_card/ProductCard";
+import ProductCard from "../../product_card/ProductCard";
 import nextId from "react-id-generator";
 const HomeProductsRow = () => {
     return (

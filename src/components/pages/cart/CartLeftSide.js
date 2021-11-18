@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import CartProduct from "./CartProduct";
 import {useStateValue} from "../../../context/Context";
+import FlipMove from "react-flip-move";
 
 const CartLeftSide = () => {
     const [initialState] = useStateValue();
+    /*Functional components have no reference,
+    I wrapped the CartProduct component with a div for
+    FlipMove to work*/
 
     return (
         <div className="cart-left-side">
@@ -15,19 +19,23 @@ const CartLeftSide = () => {
             <div>
                 <h1 className="cart-title">Your shopping basket</h1>
                 <div className="cart-products">
-                    {
-                        initialState.cart && initialState.cart.map(product =>{
-                            return(
-                                <CartProduct
-                                    id={product.id}
-                                    key={product.id}
-                                    title={product.title}
-                                    image={product.image}
-                                    price={product.price}
-                                />
-                            )
-                        })
-                    }
+                    <FlipMove>
+                        {
+                            initialState.cart && initialState.cart.map((product,index) =>{
+                                return(
+                                    <div>
+                                        <CartProduct
+                                            id={product.id}
+                                            key={index}
+                                            title={product.title}
+                                            image={product.image}
+                                            price={product.price}
+                                        />
+                                    </div>
+                                )
+                            })
+                        }
+                    </FlipMove>
                 </div>
             </div>
         </div>
