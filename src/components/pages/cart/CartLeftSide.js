@@ -20,6 +20,7 @@ const CartLeftSide = () => {
         else {
             alert("Invalid discount code!")
         }
+        setCode("");
     }
     return (
         <div className="cart-left-side">

@@ -1,4 +1,5 @@
 .payment-page {
+    background-color: white;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -6,14 +7,17 @@
     margin: 60px 20px;
 }
 .payment-details {
+    margin: 60px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: flex-start;
+    background-color: white;
+}
+.address-book {
+    border-bottom: 3px solid rgba(211, 211, 211, 0.8);
 }
 .address-book,.payment-method {
     width: 500px;
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -29,7 +33,6 @@
 }
 .content {
     margin: 10px 0;
-    border: 4px solid #F29200;
     padding: 20px;
 }
 .payment-page .cart-product{
@@ -40,4 +43,13 @@
 
 .payment-page .cart-product button{
     display: none;
+}
+
+.payment-method-content {
+    width: 100%;
+}
+
+.payment-button {
+    margin: 35px 0;
+    width: 40%;
 }

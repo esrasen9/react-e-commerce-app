@@ -62,6 +62,16 @@
     font-size: 1.1rem;
     font-weight: bolder;
 }
+.product-actions .button {
+    width: 90%;
+    margin-right: 16px;
+}
+.product-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 @media(max-width: 760px){
     .product-card {

@@ -12,6 +12,7 @@ const SignIn = () => {
         auth.signInWithEmailAndPassword(email, password)
             .then((user) => {
                 if(user) history.push("/");
+                console.log(user);
             })
             .catch(err => alert(err.message));
     }

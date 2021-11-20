@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import Search from "./Search";
-import {AiOutlineShoppingCart} from "react-icons/all";
+import {AiOutlineShoppingCart, FiHeart} from "react-icons/all";
 import "./Nav.css";
 import {useStateValue} from "../../context/Context";
 import {auth} from "../../firebase/firebase";
@@ -26,9 +26,8 @@ const Nav = () => {
                     user ? (<p>Sign Out</p>) : (<p>Sign In</p>)
                 }
             </NavLink>
-            <NavLink className="nav-link orders-link" to="/orders">
-                <span>Returns</span>
-                <p>& Orders</p>
+            <NavLink className="nav-link fav-link" to="/favorites">
+                <FiHeart size="30"/>
             </NavLink>
             <NavLink className="cart-link" to="/cart">
                 <AiOutlineShoppingCart size="30"/>

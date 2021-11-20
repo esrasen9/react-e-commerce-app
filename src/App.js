@@ -6,9 +6,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React,{useEffect} from "react";
 import {auth} from "./firebase/firebase";
 import {useStateValue} from "./context/Context";
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
+import Payment from "./components/pages/payment/Payment";
+
+const promise = loadStripe("pk_test_51JxGiFA3KvtRoDsuY0Jng2rJFNLDhfQG8IOZdQSly3kPjesTFctgpsBKUlStfyMqX2b1LbGvDouzZE1AcKdO1QQe00wZQJBWci");
 
 const App = () => {
     const [initialState,dispatch] = useStateValue();
+
     useEffect(() => {
         auth.onAuthStateChanged(user => {
            if(user){
@@ -26,17 +32,34 @@ const App = () => {
         })
     },[])
     return (
-        <div className="app">
-            <Nav/>
-            {
-                routes.map((route,index) =>
-                    (<Route
-                        key={index}
-                        exact={route.exact}
-                        path={route.path}
-                        component={route.component}/>))
-            }
-        </div>
+        <Elements stripe={promise}>
+            <div className="app">
+                <Nav/>
+                {
+                    routes.map((route,index) =>{
+                        if(route.component === Payment) {
+                            return(
+                                <Route key={index}
+                                       exact={route.exact}
+                                       path={route.path}>
+                                    <Elements stripe={promise}>
+                                        <Payment />
+                                    </Elements>
+                                </Route>
+                            )
+                        }
+                        else {
+                            return (
+                                <Route
+                                    key={index}
+                                    exact={route.exact}
+                                    path={route.path}
+                                    component={route.component}/>)
+                        }
+                    })
+                }
+            </div>
+        </Elements>
     );
 }
 

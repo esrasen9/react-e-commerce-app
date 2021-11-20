@@ -1,8 +1,9 @@
 export const initialState = {
     cart: [],
+    favorites: [],
     user: null,
     discountCode:"WUEQ10",
-    subtotal:0
+    subtotal:0,
 };
 
 export const reducer = (state,action) => {
@@ -28,6 +29,16 @@ export const reducer = (state,action) => {
                 subtotal: state.cart.reduce((acc,product) => {
                     return acc + product.price;
                 },0).toFixed(2)
+            }
+        case "ADD_FAVORITES"  :
+            return {
+                ...state,
+                favorites: [...state.favorites,action.payload]
+            }
+        case "REMOVE_FAVORITES":
+            return {
+                ...state,
+                favorites: [...state.favorites.filter(product => product.id !== action.payload)]
             }
         case "SET_DISCOUNTED_SUBTOTAL":
             return {
