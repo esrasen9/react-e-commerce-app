@@ -28,9 +28,13 @@ const Nav = () => {
                        user ? (<p>Sign Out</p>) : (<p>Sign In</p>)
                    }
                </NavLink>
-               <NavLink className="nav-link fav-link" to="/favorites">
-                   <FiHeart size="30"/>
-               </NavLink>
+               {
+                   user ? (
+                       <NavLink className="nav-link fav-link" to="/favorites">
+                           <FiHeart size="30"/>
+                       </NavLink>
+                   ) : null
+               }
                <NavLink className="cart-link" to="/cart">
                    <AiOutlineShoppingCart size="30"/>
                    <div className="cart-quantity">

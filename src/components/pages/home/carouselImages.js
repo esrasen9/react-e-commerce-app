@@ -17,6 +17,6 @@ export const images = [
     },
     {
         alt: "Carousel5",
-        imageSource:"\"https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg\""
+        imageSource:"https://m.media-amazon.com/images/I/71qid7QFWJL._SX3000_.jpg"
     },
 ]

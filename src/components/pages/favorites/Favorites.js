@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Favorites.css";
 import {useStateValue} from "../../../context/Context";
-import ProductCard from "../../product_card/ProductCard";
 import ProductCards from "../../product_card/ProductCards";
 
 const Favorites = () => {

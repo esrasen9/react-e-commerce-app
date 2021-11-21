@@ -1,10 +1,9 @@
 import React, {useEffect,useState} from 'react';
 import ProductCards from "../product_card/ProductCards";
-import {getAllProducts} from "../../context/reducer";
 import {useStateValue} from "../../context/Context";
 
 const ProductsByCategory = ({category}) => {
-    const [initialState,dispatch] = useStateValue();
+    const [initialState] = useStateValue();
     const {products} = initialState;
     const [productsByCategory,setProductsByCategory] = useState([]);
     useEffect(() => {

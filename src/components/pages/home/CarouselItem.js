@@ -12,8 +12,8 @@ const CarouselItem = () => {
 
         <Carousel className="home-carousel" variant="dark">
             {
-                images.map(image => (
-                    <Carousel.Item className="each-slide">
+                images.map((image,index) => (
+                    <Carousel.Item key={index} className="each-slide">
                         <img
                             className="d-block w-100"
                             alt={image.alt}

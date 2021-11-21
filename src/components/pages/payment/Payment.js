@@ -16,11 +16,8 @@ const Payment = () =>  {
                         return(
                             <div>
                                 <CartProduct
-                                    id={product.id}
+                                    product={product}
                                     key={index}
-                                    title={product.title}
-                                    image={product.image}
-                                    price={product.price}
                                 />
                             </div>
                         )

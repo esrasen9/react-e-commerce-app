@@ -31,10 +31,6 @@
 .a-logo {
     width: 90px;
 }
-.content {
-    margin: 10px 0;
-    padding: 20px;
-}
 .payment-page .cart-product{
     background-color: white;
     width: 250px;
@@ -45,7 +41,9 @@
     display: none;
 }
 
-.payment-method-content {
+.payment-form-container {
+    margin: 10px 0;
+    padding: 20px;
     width: 100%;
 }
 

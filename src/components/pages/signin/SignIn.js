@@ -12,7 +12,6 @@ const SignIn = () => {
         auth.signInWithEmailAndPassword(email, password)
             .then((user) => {
                 if(user) history.push("/");
-                console.log(user);
             })
             .catch(err => alert(err.message));
     }
@@ -25,7 +24,6 @@ const SignIn = () => {
             })
             .catch(err => alert(err.message));
     }
-
     return (
         <div className="page sign-page">
             <Link to="/" className="amazon-logo">
@@ -57,7 +55,6 @@ const SignIn = () => {
                         By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.
                     </p>
                 </form>
-
             </div>
             <div className="new-account">
                 <div className="new-account-hr">
