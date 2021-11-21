@@ -1,4 +1,4 @@
-#E-Commerce App With ReactJS ⚡️
+# E-Commerce App With ReactJS ⚡️
 
 ## Installation
 
@@ -40,19 +40,19 @@ const firebaseConfig = {
 # Screenshots
 :camera_flash:
 
-![GitHub Logo](src/screenshots/1.png)
+![GitHub Logo](./src/screenshots/1.png)
 
-![GitHub Logo](src/screenshots/2.png)
+![GitHub Logo](./src/screenshots/2.png)
 
-![GitHub Logo](src/screenshots/3.png)
+![GitHub Logo](./src/screenshots/3.png)
 
-![GitHub Logo](src/screenshots/4.png)
+![GitHub Logo](./src/screenshots/4.png)
 
-![GitHub Logo](src/screenshots/5.png)
+![GitHub Logo](./src/screenshots/5.png)
 
-![GitHub Logo](src/screenshots/6.png)
+![GitHub Logo](./src/screenshots/6.png)
 
-![GitHub Logo](src/screenshots/7.png)
+![GitHub Logo](./src/screenshots/7.png)
 
-![GitHub Logo](src/screenshots/8.png)
+![GitHub Logo](./src/screenshots/8.png)
 
