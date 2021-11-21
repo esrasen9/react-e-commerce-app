@@ -4,7 +4,13 @@ export const initialState = {
     user: null,
     discountCode:"WUEQ10",
     subtotal:0,
+    products: []
 };
+
+export const getAllProducts = () => {
+    return fetch('https://fakestoreapi.com/products')
+                .then(res=>res.json());
+}
 
 export const reducer = (state,action) => {
     switch (action.type){
@@ -23,6 +29,11 @@ export const reducer = (state,action) => {
                 ...state,
                 user: action.user
             }
+        case "SET_PRODUCTS":
+            return {
+                ...state,
+                products: [...action.payload]
+            }
         case "SET_SUBTOTAL"  :
             return {
                 ...state,
@@ -31,14 +42,20 @@ export const reducer = (state,action) => {
                 },0).toFixed(2)
             }
         case "ADD_FAVORITES"  :
-            return {
-                ...state,
-                favorites: [...state.favorites,action.payload]
+            const isExist = state.favorites.find((fav) =>(fav.id === action.payload.id));
+            if(isExist){
+                return {...state}
+            }
+            else {
+                return {
+                    ...state,
+                    favorites: [...state.favorites,action.payload]
+                }
             }
         case "REMOVE_FAVORITES":
             return {
                 ...state,
-                favorites: [...state.favorites.filter(product => product.id !== action.payload)]
+                favorites: [...state.favorites.filter(fav => fav.id !== action.payload.id)]
             }
         case "SET_DISCOUNTED_SUBTOTAL":
             return {

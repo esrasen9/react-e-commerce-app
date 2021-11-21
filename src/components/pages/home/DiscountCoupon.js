@@ -3,7 +3,7 @@ import {useCopyDiscountCode} from "../../../lib/useCopyDiscountCode";
 import {useStateValue} from "../../../context/Context";
 
 const DiscountCoupon = () => {
-    const [initialState,dispatch] = useStateValue();
+    const [initialState] = useStateValue();
     const {discountCode} = initialState;
     const [isCopied,copyDiscountCode] = useCopyDiscountCode({
         resetInterval: 2000

@@ -10,6 +10,8 @@
 .cart-left-side {
     width: 70%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-ad-img {
@@ -24,22 +26,23 @@
     border-bottom: 0.1rem solid lightgray;
 }
 
+
 .cart-product{
-    width: 600px;
-    margin: 20px;
     display: flex;
-    justify-content: space-between;
+    background-color: white;
+    width: 500px;
 }
 
 .cart-product-detail {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .cart-product-img {
     width: 250px;
+    margin-right: 100px;
 }
 
 .checkout {
@@ -58,6 +61,7 @@
     width: 400px;
     border: 1px #a4a4a4 solid;
     font-size: 1.2rem;
+    margin-top: 40px;
 }
 .cart-discount-input input {
     width: 70%;
@@ -75,4 +79,8 @@
     height: 100%;
     width: 30%;
     padding: 0.4rem;
+}
+
+.cart-left-side .button {
+    width: 240px;
 }

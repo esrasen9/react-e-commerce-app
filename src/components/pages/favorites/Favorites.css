@@ -1,0 +1,9 @@
+.fav-title {
+    padding: 10px;
+}
+.fav-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+

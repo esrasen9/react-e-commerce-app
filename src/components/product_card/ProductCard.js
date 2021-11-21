@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react';
 import ProductRating from "./ProductRating";
 import ".//ProductCard.css";
 import {useStateValue} from "../../context/Context";
-import {FaHeart, FaRegHeart} from "react-icons/all";
+import {FaHeart,FaRegHeart} from "react-icons/all";
 
-const ProductCard = ({id,image,title,price,rating}) => {
+const ProductCard = ({id,image,title,price,rating,numReviews}) => {
     const [initialState,dispatch] = useStateValue();
     const [isFavorite,setIsFavorite] = useState(false);
     useEffect(() => {
@@ -18,29 +18,34 @@ const ProductCard = ({id,image,title,price,rating}) => {
                 title,
                 image,
                 price,
-                rating
+                rating,
+                numReviews
         }});
         dispatch({
             type: "SET_SUBTOTAL"
         })
     }
+
     const handleAddFav = () => {
         setIsFavorite(true);
-        dispatch({type: "ADD_FAVORITES",
+        dispatch({
+            type: "ADD_FAVORITES",
             payload: {
                 id,
                 title,
                 image,
                 price,
-                rating
-            }});
-    }
+                rating,
+                numReviews
+            }})
+        }
     const handleRemoveFav = () => {
         setIsFavorite(false);
-        dispatch({type: "REMOVE_FAVORITES",
+        dispatch({
+            type: "REMOVE_FAVORITES",
             payload: {
                 id
-        }});
+            }});
     }
     return (
         <div className="product-card">
@@ -52,7 +57,7 @@ const ProductCard = ({id,image,title,price,rating}) => {
                <div className="product-description">
                    <p>{title}</p>
                </div>
-               <ProductRating rating={rating} numReviews={3000}/>
+               <ProductRating rating={rating} numReviews={numReviews}/>
                <div className="product-price">
                    ${price}
                </div>
@@ -61,13 +66,17 @@ const ProductCard = ({id,image,title,price,rating}) => {
                 <button onClick={addToCart} className="button">
                     Add to Cart
                 </button>
-                {
-                    isFavorite ? (<FaHeart
-                                        color="red"
-                                        onClick={() =>handleRemoveFav}
-                                        size="30"/> ): (<FaRegHeart
-                                                        onClick={handleAddFav}
-                                                        size="30"/>)
+                {isFavorite ?
+                        <FaHeart
+                            onClick={handleRemoveFav}
+                            size={30}
+                            color="red"
+                            style={{cursor:"pointer"}}/>
+                    :
+                        <FaRegHeart
+                            onClick={handleAddFav}
+                            size={30}
+                            style={{cursor:"pointer"}}/>
                 }
             </div>
 

@@ -1,4 +1,4 @@
-.nav {
+.nav{
     background-color: #131921;
     display: flex;
     align-items: flex-start;
@@ -6,7 +6,7 @@
     position: sticky;
     top:0;
 }
-.nav > * {
+.nav > * , .nav-sub-links > *{
     color: #fff !important;
     text-decoration: none;
 }
@@ -71,4 +71,28 @@
 
 .fav-link {
     align-self:center;
+}
+
+.nav-sub-links {
+    display: flex;
+    background-color: #131921;
+}
+
+.nav-sub-links > *{
+    margin: 4px 16px 2px 10px;
+}
+
+.products-by-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.products-by-category > * {
+    margin-right: 10px;
+}
+
+.active h6 {
+    color: #F9BD69;
 }

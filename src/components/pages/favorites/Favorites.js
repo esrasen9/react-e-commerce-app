@@ -2,23 +2,18 @@ import React from 'react';
 import "./Favorites.css";
 import {useStateValue} from "../../../context/Context";
 import ProductCard from "../../product_card/ProductCard";
+import ProductCards from "../../product_card/ProductCards";
 
 const Favorites = () => {
     const [initialState] = useStateValue();
     return (
         <div>
-            {
-                initialState.favorites.map(fav => {
-                    const {id,title,image,price,rating} = fav;
-                    return (<ProductCard
-                        id={id}
-                        title={title}
-                        image={image}
-                        price={price}
-                        rating={rating}
-                    />)
-                })
-            }
+            <div className="fav-title">
+                <h1>Your Favorites</h1>
+            </div>
+           <div className="fav-products">
+               <ProductCards products={initialState.favorites}/>
+           </div>
         </div>
     );
 }
