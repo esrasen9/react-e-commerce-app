@@ -37,8 +37,7 @@ const firebaseConfig = {
     </li>
 </ul>
 
-# Screenshots
-:camera_flash:
+# Screenshots :camera_flash:
 
 ![GitHub Logo](./src/screenshots/1.png)
 
